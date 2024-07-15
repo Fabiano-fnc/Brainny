@@ -1,0 +1,113 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.login {
+  color: #330693;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+.imageSection {
+  flex: 0 1 50%;  /* Limita o crescimento da seção para metade do espaço disponível */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.grupo {
+  width: auto;
+  height: 70vh;
+  max-width: 100%;  
+}
+
+.welcomeText, .subtitleText {
+  text-align: center;
+  width: 100%;  /* Ocupa a largura total da coluna */
+  font-family: 'Poppins', sans-serif;
+  color: #330693;
+  margin-top: 20px;  /* Espaço entre a imagem e o texto */
+}
+
+.welcomeText {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.subtitleText {
+  font-size: 25px;
+  line-height: 38px;
+  opacity: 0.7;
+}
+
+.formSection {
+  flex: 0 1 50%;  /* Limita o crescimento da seção para metade do espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.formSection .logo img {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.formSection h2 {
+  margin-bottom: 20px;
+}
+
+.formSection .form {
+  width: 80%;  /* Largura do formulário */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #FFFFFF;
+}
+
+.formSection input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  background-color: #7F56D9;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.customLink {
+  display: block;
+  margin-top: 10px;
+  color: #7F56D9;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #6658D3; 
+}
+
+.errorText {
+  color: red;
+  margin-bottom: 10px;
+}

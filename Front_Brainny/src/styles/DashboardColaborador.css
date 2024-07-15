@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+}
+
+.go{
+  color: #330693;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+.sidebar-container {
+  width: 250px;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  color: #000;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.main-content {
+  flex: 1;
+  background: #f5f5f5;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.register-button {
+  background: #330693;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-button h1 {
+  color: #fff;
+}
+
+.register-button:hover {
+  background-color: #330693;
+  color: #ffffff;
+}
+
+.table-container {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f5f5f5;
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
