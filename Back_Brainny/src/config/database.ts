@@ -1,5 +1,7 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
+import Register from '../model/Register';
+import User from '../model/User';
 
 dotenv.config();
 

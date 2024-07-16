@@ -1,5 +1,6 @@
 import { Model, DataTypes, Optional } from 'sequelize';
 import sequelize from '../config/sequelize';
+import Register from './Register'; 
 
 // Interface para atributos obrigatórios
 interface UserAttributes {

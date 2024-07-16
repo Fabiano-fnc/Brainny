@@ -34,7 +34,7 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLogout = async (event: React.FormEvent) => {
-    await handleCreateRegister(); // Registra o ponto antes de fazer o logout
+    // await handleCreateRegister(); // Registra o ponto antes de fazer o logout
     const user_id = getUserFromToken()?.id;
     if (user_id) logout(user_id);
     navigate('/login');
@@ -76,7 +76,8 @@ const Dashboard: React.FC = () => {
       const responseRegister = await instance.get(`${API_URL}/api/registers`, {
         params: {
           page,
-          limit: recordsPerPage
+          limit: recordsPerPage,
+          user_id: userId,
         }
       });
       const responseUsers = await instance.get(`${API_URL}/api/usuarios`);
@@ -84,10 +85,9 @@ const Dashboard: React.FC = () => {
       const dataRegisters: RegisterResponse[] = responseRegister.data.rows;
       const dataUsers: UsersResponse[] = responseUsers.data;
 
-      const filteredDataRegisters = dataRegisters.filter(register => register.user_id === userId);
-      const totalRecords = responseRegister.data.count; // Total de registros no servidor
+      const totalRecords = responseRegister.data.count; // Total de registros do usuario no servidor
 
-      const mappedData = filteredDataRegisters.map(register => ({
+      const mappedData = dataRegisters.map(register => ({
         id: register.id,
         user_id: register.user_id,
         name: dataUsers.find(user => user.id === register.user_id)?.name || '-',
@@ -96,11 +96,16 @@ const Dashboard: React.FC = () => {
       }));
 
       setTimeRecords(mappedData);
+      
       setTotalPages(Math.ceil(totalRecords / recordsPerPage));
     } catch (error) {
       console.error('Erro ao carregar os registros de tempo:', error);
     }
   };
+
+  useEffect(() => {
+    fetchRegisters(currentPage);
+  }, []);
 
   useEffect(() => {
     fetchRegisters(currentPage);
