@@ -11,14 +11,3 @@ export const getUsers = async (req: Request, res: Response) => {
   }
 };
 
-export const createUser = async (req: Request, res: Response) => {
-  const { name, email, senha, role } = req.body;
-
-  try {
-    const newUser = await User.create({ name, email, senha, role });
-    res.status(201).json(newUser);
-  } catch (err) {
-    console.error('Erro ao criar usuário:', err);
-    res.status(500).json({ message: 'Erro ao criar usuário.' });
-  }
-};
