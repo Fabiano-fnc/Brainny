@@ -34,7 +34,6 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLogout = async (event: React.FormEvent) => {
-    // await handleCreateRegister(); // Registra o ponto antes de fazer o logout
     const user_id = getUserFromToken()?.id;
     if (user_id) logout(user_id);
     navigate('/login');
@@ -85,7 +84,7 @@ const Dashboard: React.FC = () => {
       const dataRegisters: RegisterResponse[] = responseRegister.data.rows;
       const dataUsers: UsersResponse[] = responseUsers.data;
 
-      const totalRecords = responseRegister.data.count; // Total de registros do usuario no servidor
+      const totalRecords = responseRegister.data.count; 
 
       const mappedData = dataRegisters.map(register => ({
         id: register.id,
@@ -130,7 +129,7 @@ const Dashboard: React.FC = () => {
             <li><a href="#">Dashboard</a></li>
           </ul>
         </nav>
-        <button onClick={handleLogout} className="logout-button">Registrar Ponto e Logout</button>
+        <button onClick={handleLogout} className="logout-button">Logout</button>
       </div>
 
       <div className="content">
