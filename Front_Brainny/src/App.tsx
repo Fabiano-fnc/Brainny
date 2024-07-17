@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-// import PrivateRoute from './components/PrivateRoute'; // Importe o componente PrivateRoute
 import DashboardColaborador from './components/DashboardColaboradores';
 
 const App: React.FC = () => {

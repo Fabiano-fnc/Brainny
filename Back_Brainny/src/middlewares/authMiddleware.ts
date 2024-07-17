@@ -1,4 +1,3 @@
-// src/middlewares/authMiddleware.ts
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
@@ -22,13 +21,13 @@ const authenticateJWT = (req: Request, res: Response, next: NextFunction) => {
     const token = authHeader.split(' ')[1];
     jwt.verify(token, process.env.SECRET_KEY!, (err, user) => {
       if (err) {
-        return res.sendStatus(403); // Token inválido
+        return res.sendStatus(403); 
       }
       req.user = user as UserPayload;
       next();
     });
   } else {
-    res.sendStatus(401); // Token ausente
+    res.sendStatus(401); 
   }
 };
 

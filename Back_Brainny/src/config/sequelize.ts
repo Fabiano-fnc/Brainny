@@ -13,8 +13,8 @@ if (!databaseUrl) {
 
 const sequelize = new Sequelize(databaseUrl, {
   dialect: 'postgres',
-  logging: false, // desabilitar logging SQL no console
-  timezone: '-03:00', // Define o fuso horário para Brasil
+  logging: false,
+  timezone: '-03:00',
 });
 
 export default sequelize;

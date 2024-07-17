@@ -36,7 +36,6 @@ export const login = async (email: string, senha: string) => {
     const response = await axios.post<LoginResponse>(`${API_URL}/auth/login`, { email, senha });
     const { token } = response.data;
 
-    // Armazena o token no localStorage
     localStorage.setItem('token', token);
 
     return token;

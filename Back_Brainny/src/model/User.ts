@@ -2,7 +2,6 @@ import { Model, DataTypes, Optional } from 'sequelize';
 import sequelize from '../config/sequelize';
 import Register from './Register'; 
 
-// Interface para atributos obrigatórios
 interface UserAttributes {
   id: number;
   name: string;
@@ -11,7 +10,6 @@ interface UserAttributes {
   role: string;
 }
 
-// Interface para atributos opcionais
 interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
 
 class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {

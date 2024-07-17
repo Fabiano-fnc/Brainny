@@ -1,4 +1,3 @@
-// src/axiosConfig.ts
 import axios from 'axios';
 import { getToken } from './services/authService';
 

@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
   const [timeRecords, setTimeRecords] = useState<Registers[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
-  const recordsPerPage = 10; // Número de registros por página
+  const recordsPerPage = 10; 
   const navigate = useNavigate();
 
   const handleLogout = async (event: React.FormEvent) => {

@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
   const [timeRecords, setTimeRecords] = useState<Registers[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
-  const recordsPerPage = 10; // Número de registros por página
+  const recordsPerPage = 10; 
   const navigate = useNavigate();
 
   const handleLogout = async () => {
@@ -61,7 +61,6 @@ const Dashboard: React.FC = () => {
         time: new Date(register.registered_time).toTimeString().split(' ')[0]
       }));
 
-      // Ordena os registros por data/hora em ordem decrescente
       const sortedData = mappedData.sort((a, b) => {
         const dateA = new Date(`${a.date} ${a.time}`).getTime();
         const dateB = new Date(`${b.date} ${b.time}`).getTime();

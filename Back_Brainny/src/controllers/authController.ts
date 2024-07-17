@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import User from '../model/User'; // Certifique-se de que o caminho está correto
+import User from '../model/User'; 
 import jwt from 'jsonwebtoken';
 
 export const login = async (req: Request, res: Response) => {
